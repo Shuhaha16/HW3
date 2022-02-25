@@ -1,2 +1,14 @@
 <h1> Shoe's Favorite Places </h1>
 
+<p> paragraph 1 </p>
+
+<% places = Place.all %>
+<ul>
+  <% for place in places %>
+    <li><%= place.name %> – <%= place.created_at %>, <%= place.updated_at %></li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/places">Refresh</a>
+</p>
