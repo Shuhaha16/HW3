@@ -1,7 +1,12 @@
-<form action="/places" method="post">
+<h1> Add a new favorite PLACE here </h1>
+
+<%= form_with model: @place do |form| %>
+
   <p>
-    <label for="name">Place name</label>
-    <input type="text" name="place[name]" id="place">
+    <%= form.label "name", "Place Name" %>
+    <%= form.text_field "name" %>
   </p>
-  <input type="submit" name="commit" value="Create Post">
-</form>
+ 
+</p> 
+<%= form.submit %>
+<% end %>

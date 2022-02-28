@@ -3,12 +3,12 @@ class PlacesController < ApplicationController
     
     
     def new
-        @post = Post.new        
+        @place = Place.new        
     end
 
     def create
-        @post = Post.new(params["posts"])
-        @post.save
+        # @place = Place.new(params["places"])
+        # @place.save
         redirect_to "/places"
     end
 end
