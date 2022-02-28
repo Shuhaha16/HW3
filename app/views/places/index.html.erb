@@ -15,5 +15,10 @@
 <p> There are <%= places.size %> places in your list! </p>
 
 <p>
+  <a href="/contacts/new?place_id=<%= @place.id %>">Add new place<%= @place.name %></a>
+</p>
+
+
+<p>
   <a href="/places">Refresh</a>
 </p>
