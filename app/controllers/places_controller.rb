@@ -1,7 +1,13 @@
 class PlacesController < ApplicationController
     
-    # <% places = ["Portugal","Norway", "England"] %>
-    
+    def index
+         @places = Place.all 
+    end
+
+    def show
+        @places = Place.find(params["id"])
+    end
+
     def new
         @place = Place.new        
     end
