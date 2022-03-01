@@ -1,0 +1,12 @@
+#Header = place id
+
+# posts where post.where places_id = place.id
+
+<ul>
+  <% for post in @posts %>
+    <li>
+      <%= post.title %> </a>
+    </li>
+  <% end %>
+</ul>
+

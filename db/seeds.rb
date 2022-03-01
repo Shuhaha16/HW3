@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-
+places = Place.destroy_all
 places = Place.create(name: "Norway")
