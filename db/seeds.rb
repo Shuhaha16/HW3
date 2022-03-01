@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
 places = Place.destroy_all
-places = Place.create(name: "Norway")
+#Comment out if you don't want to restart post database each time
+
+places = Place.create([{ name: "Norway"}, {name: "Portugal"}, {name: "Hyde Park" }])
+#Initial seed of model
