@@ -1,3 +1,27 @@
 <h1> Write a post about one of your favorite places </h1>
 
+<!-- 
+TODO
+# change title to refer to place
 
+  -->
+
+<%= form_with model: @place do |form| %>
+
+  <p>
+    <%= form.label "title", "Post Title" %>
+    <%= form.text_field "title" %>
+  </p>
+<!-- 
+
+  <p>
+    <%= form.label "city" %>
+    <%= form.text_field "city" %>
+    <%= form.label "state" %>
+    <%= form.text_field "state" %>
+  </p>
+  -->
+
+</p> 
+<%= form.submit %>
+<% end %>
