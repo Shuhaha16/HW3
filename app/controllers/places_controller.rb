@@ -5,17 +5,16 @@ class PlacesController < ApplicationController
     end
 
     def show
-        @places = Place.find(params["id"])
+        @place = Place.find(params["id"])
     end
-
+#why ID and not something like name?
     def new
-        @places = Place.new 
-               
+        @place = Place.new 
     end
 
     def create
-        @places = Place.new(params["place"])
-        @places.save
+        @place = Place.new(params["place"])
+        @place.save
         redirect_to "/places"
     end
 end
