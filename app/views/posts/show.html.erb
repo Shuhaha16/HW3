@@ -2,9 +2,7 @@
 TODO
 # -add to list place id to confirm connection
 # -and link to show.html.erb or maybe edit link after each?
-# -Bring Post id from places/show
-
-#Header = place id
+# Header = place name
 # posts where post.where places_id = place.id
 -->
 
@@ -18,6 +16,6 @@ TODO
   <p> <%= @post.description%> </p>
   <p> <%= @post.posted_on%> </p>
 
-<p><a href="/post/edit?<%=@post.id%>" > Edit Post</a><p> 
+<p><a href="/posts/edit?<%=@post.id%>" > Edit Post</a><p> 
 
 <p><a href="/places/"> Back to places</a></p>

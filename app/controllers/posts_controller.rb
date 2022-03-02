@@ -14,20 +14,21 @@ class PostsController < ApplicationController
         @post.place_id = @place.id
     end
 
-   def show
+    def show
         @post = Post.find(params["id"])
     end
 
    def create
-    @post = Post.new(params["post"])
-    @post.save
-    redirect_to "/places/#{@post.place.id}"
-    #Change to places/id?
+        @post = Post.new(params["post"])
+        @post.save
+     redirect_to "/places/#{@post.place.id}"
+    end
+    
+    def edit
+        @post = Post.find(params["id"])
     end
 
-end
-
-
+end    
 # def show
 #     @contact = Contact.find(params["id"])
 #   end

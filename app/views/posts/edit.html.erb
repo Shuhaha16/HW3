@@ -1,0 +1,18 @@
+<%= form_with model: @post do |form| %>
+
+  <p>
+    <%= form.label "title", "Post Title" %>
+    <%= form.text_field "title" %>
+  </p>
+
+  <p>
+    <%= form.label "description" %>
+    <%= form.text_field "description" %>
+    <%= form.label "posted_on" %>
+    <%= form.text_field "posted_on" %>
+  </p>
+
+</p> 
+<%= form.hidden_field "place_id" %>
+<%= form.submit %>
+<% end %>
