@@ -2,26 +2,26 @@
 
 <!-- 
 TODO
-# change title to refer to place
+# -test post list
+# - link with "new" link
 
   -->
 
-<%= form_with model: @place do |form| %>
+<%= form_with model: @post do |form| %>
 
   <p>
     <%= form.label "title", "Post Title" %>
     <%= form.text_field "title" %>
   </p>
-<!-- 
 
   <p>
-    <%= form.label "city" %>
-    <%= form.text_field "city" %>
-    <%= form.label "state" %>
-    <%= form.text_field "state" %>
+    <%= form.label "description" %>
+    <%= form.text_field "description" %>
+    <%= form.label "posted_on" %>
+    <%= form.text_field "Posted On" %>
   </p>
-  -->
 
 </p> 
+<%= form.hidden_field "place_id" %>
 <%= form.submit %>
 <% end %>

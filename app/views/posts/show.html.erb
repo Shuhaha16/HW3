@@ -7,6 +7,8 @@ TODO
 
 # posts where post.where places_id = place.id
 
+<h1> Posts </h1>
+
 <ul>
   <% for post in @posts %>
     <li>
@@ -16,3 +18,11 @@ TODO
 </ul>
 
 
+<h1><%= @post.title %></h1>
+
+<ul>
+  <li><%= @post.description %></li>
+  <li><%= @post.posted_on %></li>
+</ul>
+
+<p><a href="/places/<%= @post.place_id %>">Back to <%= @contact.company.name %></a></p>

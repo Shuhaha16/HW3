@@ -1,8 +1,19 @@
 <h1><%= @place.name %></h1>
 
 <p1>this is place id: <%= @place.id%> </p1>
+<p1> </p1>
 
-<a href= "/places">Back to Places</a>
+<ul>
+  <% for post in @posts %>
+    <li>
+      <a href= "/posts/<%= place.id%>"> <%= place.name %> </a>
+    </li>
+  <% end %>
+</ul>
+
+
+<br>
+<a href= "/places"> Back to Places </a>
 
 
 
