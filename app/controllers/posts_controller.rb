@@ -15,8 +15,7 @@ class PostsController < ApplicationController
     end
 
    def show
-        @place = Place.where(post.place_id == params["place_id"])
-        @posts = @place.posts
+        @post = Post.find(params["id"])
     end
 
    def create
