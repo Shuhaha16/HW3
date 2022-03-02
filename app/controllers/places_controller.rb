@@ -12,6 +12,7 @@ class PlacesController < ApplicationController
 
     def show
         @place = Place.find(params["id"])
+        @posts = @place.posts
     end
 #why ID and not something like name of place? b/c of spaces?
     def new

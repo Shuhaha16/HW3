@@ -8,18 +8,39 @@ class PostsController < ApplicationController
     end
         
     def new
-        @post = Post.new   
-        @post.place_id = params["place_id"]
-        #is the place_id correct? or place.id
+        @post = Post.new 
+        @place = Place.find(params["place_id"])
+        @post.place_id = @place.id
     end
 
-    
+    def edit
+        
+    end
 
    def create
     @post = Post.new(params["post"])
     @post.save
-    redirect_to "/places"
+    redirect_to "/places/#{@post.place.id}"
     #Change to places/id?
-end
+    end
 
 end
+
+
+# def show
+#     @contact = Contact.find(params["id"])
+#   end
+
+#   def new
+#     @contact = Contact.new
+#     @company = Company.find(params["company_id"])
+#     @contact.company_id = @company.id
+#   end
+
+#   def create
+#     @contact = Contact.new(params["contact"])
+#     @contact.save
+#     redirect_to "/companies/#{@contact.company.id}"
+#   end
+
+# end

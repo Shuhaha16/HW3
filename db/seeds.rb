@@ -15,11 +15,12 @@ places = Place.destroy_all
 #Comment out if you don't want to restart post database each time
 
 places = Place.create([{ name: "Norway"}, {name: "Portugal"}, {name: "Hyde Park" }])
+
 #Initial seed of model
 # posts = Post.create([
-#     {title: "The beginning", description: "It was a dark and story night...", posted_on: "02/21/22", place_id = "14" }
-#     {title: "The Middle", description: "a Twosday.", posted_on: "02/22/22", place_id = "14" }
-#     {title: "The End", description: "and finally wednesday.", posted_on: "02/23/22", place_id = "14"} 
+#     {title: "The beginning", description: "It was a dark and story night", posted_on: "02/21/22" , place_id: places[0].id }
+#     # {title: "The Middle", description: "a Twosday.", posted_on: 02/22/22 , place_id:  1 },
+#     # {title: "The End", description: "and finally wednesday.", posted_on:  02/23/22 , place_id = 1} 
 # ])
   #connect place id to location? id might change with db:seed command
 

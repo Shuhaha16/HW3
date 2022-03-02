@@ -4,15 +4,19 @@
 <br>
 
 <ul>
-  <% for place in @places %>
+  <% for post in @posts %>
     <li>
-      <a href= "/places/<%=place.id%>"> <%= place.name %> </a>
+      <a href= "/posts/<%=post.id%>"> <%= post.title %> </a>
     </li>
   <% end %>
 </ul>
 
 
+
+<p><a href = "/posts/new?place_id=<%=@place.id %>" >Create a new post</a>
+
 <br>
+
 <a href= "/places"> Back to Places </a>
 
 
