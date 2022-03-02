@@ -1,12 +1,12 @@
 <h1><%= @place.name %></h1>
-
+<br>
 <p1>this is place id: <%= @place.id%> </p1>
-<p1> </p1>
+<br>
 
 <ul>
-  <% for post in @posts %>
+  <% for place in @places %>
     <li>
-      <a href= "/posts/<%= place.id%>"> <%= place.name %> </a>
+      <a href= "/places/<%=place.id%>"> <%= place.name %> </a>
     </li>
   <% end %>
 </ul>

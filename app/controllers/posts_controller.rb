@@ -2,17 +2,18 @@ class PostsController < ApplicationController
     #TODO
     #-Add edit function
     #-Add edit HTML
-    
-    
-    
+   
+    def index
+        @post = Post.all 
+    end
+        
     def new
         @post = Post.new   
         @post.place_id = params["place_id"]
         #is the place_id correct? or place.id
     end
-    def index
-        @post = Post.all 
-   end
+
+    
 
    def create
     @post = Post.new(params["post"])
