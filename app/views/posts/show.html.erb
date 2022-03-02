@@ -1,13 +1,16 @@
+<!--
 TODO
 # -add to list place id to confirm connection
-# -and link to shoe.html.erb or maybe edit link after each?
-
+# -and link to show.html.erb or maybe edit link after each?
+# -Bring Post id from places/show
 
 #Header = place id
-
 # posts where post.where places_id = place.id
+-->
+
 
 <h1> Posts </h1>
+
 
 <ul>
   <% for post in @posts %>
@@ -18,11 +21,3 @@ TODO
 </ul>
 
 
-<h1><%= @post.title %></h1>
-
-<ul>
-  <li><%= @post.description %></li>
-  <li><%= @post.posted_on %></li>
-</ul>
-
-<p><a href="/places/<%= @post.place_id %>">Back to <%= @contact.company.name %></a></p>

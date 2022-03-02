@@ -2,9 +2,10 @@ class PostsController < ApplicationController
     #TODO
     #-Add edit function
     #-Add edit HTML
+    #-Add Show action
    
     def index
-        @post = Post.all 
+        @posts = Post.all 
     end
         
     def new
@@ -13,8 +14,9 @@ class PostsController < ApplicationController
         @post.place_id = @place.id
     end
 
-    def edit
-        
+   def show
+        @place = Place.where(post.place_id == params["place_id"])
+        @posts = @place.posts
     end
 
    def create
